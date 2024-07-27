@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Model Generator</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; margin: 0; padding: 20px; }
+        canvas { border: 1px solid black; }
+        #controls { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>3D Model Generator</h1>
+    <textarea id="prompt" rows="4" cols="50" placeholder="Enter text prompt to generate 3D model..."></textarea>
+    <button onclick="generateModel()">Generate Model</button>
+    <button onclick="rotateModel()">Rotate 360°</button>
+    <div id="controls">
+        <label for="animation">Choose animation:</label>
+        <select id="animation">
+            <option value="move">Move</option>
+            <option value="fall">Fall</option>
+            <option value="float">Float</option>
+            <option value="fly">Fly</option>
+        </select>
+        <button onclick="applyAnimation()">Apply Animation</button>
+    </div>
+    <canvas id="canvas" width="600" height="400"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
